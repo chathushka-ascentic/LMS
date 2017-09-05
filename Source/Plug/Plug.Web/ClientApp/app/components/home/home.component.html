@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="starter-template">
+        <div class="starter-template panel panel-default">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <h2 class="font-bold">Welcome to Plug</h2>
+                    <h4 class="text-left">Master your craft.</h4>
+                    <p class="text-left">
+                        Work smarter and master your craft with a technology learning platform that will help you build better and create more.
+                    </p>
+                    <p class="text-left">
+                        To login to the system use below emails,
+                    </p>
+                    <ul class="text-left">
+                        <li>test1@gmail.com</li>
+                        <li>test2@gmail.com</li>
+                        <li>test3@gmail.com</li>
+                    </ul>
+                    <p class="text-left">
+                        Password will be "Donkey@1"
+                    </p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <form>
+                        <div class="form-group">
+                            <input type="email" [(ngModel)]="student.email" name="email" class="form-control" placeholder="Student Email" required="">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" [(ngModel)]="student.password" name="password" class="form-control" placeholder="Password" required="">
+                        </div>
+                        <button (click)="login()" class="btn btn-primary btn-block block full-width m-b">Login</button>
+                    </form>
+                    <hr />
+                    <a class="btn btn-primary btn-block block full-width m-b" [routerLink]="['/managecourses']">
+                        Admin
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

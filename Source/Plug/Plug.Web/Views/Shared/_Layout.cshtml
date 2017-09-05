@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Plug_Web</title>
+    <base href="~/" />
+
+    <link rel="stylesheet" href="~/dist/vendor.css" asp-append-version="true" />
+    <style>
+        html, body {
+            height: 100%;
+        }
+        body {
+            background-color: #f3f3f4;
+        }
+    </style>
+</head>
+<body>
+    @RenderBody()
+
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>
