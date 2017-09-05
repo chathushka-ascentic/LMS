@@ -1,0 +1,13 @@
+C:\Pasan\Project\Interview\Plug\Plug.Data\bin\Debug\netcoreapp2.0\Plug.Data.deps.json
+C:\Pasan\Project\Interview\Plug\Plug.Data\bin\Debug\netcoreapp2.0\Plug.Data.dll
+C:\Pasan\Project\Interview\Plug\Plug.Data\bin\Debug\netcoreapp2.0\Plug.Data.pdb
+C:\Pasan\Project\Interview\Plug\Plug.Data\bin\Debug\netcoreapp2.0\Plug.DataRepositories.dll
+C:\Pasan\Project\Interview\Plug\Plug.Data\bin\Debug\netcoreapp2.0\Plug.Entities.dll
+C:\Pasan\Project\Interview\Plug\Plug.Data\bin\Debug\netcoreapp2.0\Plug.DataRepositories.pdb
+C:\Pasan\Project\Interview\Plug\Plug.Data\bin\Debug\netcoreapp2.0\Plug.Entities.pdb
+C:\Pasan\Project\Interview\Plug\Plug.Data\obj\Debug\netcoreapp2.0\Plug.Data.csprojResolveAssemblyReference.cache
+C:\Pasan\Project\Interview\Plug\Plug.Data\obj\Debug\netcoreapp2.0\Plug.Data.csproj.CoreCompileInputs.cache
+C:\Pasan\Project\Interview\Plug\Plug.Data\obj\Debug\netcoreapp2.0\Plug.Data.AssemblyInfoInputs.cache
+C:\Pasan\Project\Interview\Plug\Plug.Data\obj\Debug\netcoreapp2.0\Plug.Data.AssemblyInfo.cs
+C:\Pasan\Project\Interview\Plug\Plug.Data\obj\Debug\netcoreapp2.0\Plug.Data.dll
+C:\Pasan\Project\Interview\Plug\Plug.Data\obj\Debug\netcoreapp2.0\Plug.Data.pdb
