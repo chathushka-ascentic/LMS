@@ -1,0 +1,9 @@
+C:\Pasan\Project\Interview\Plug\Plug.Resources\bin\Debug\netcoreapp2.0\Plug.Resources.deps.json
+C:\Pasan\Project\Interview\Plug\Plug.Resources\bin\Debug\netcoreapp2.0\Plug.Resources.dll
+C:\Pasan\Project\Interview\Plug\Plug.Resources\bin\Debug\netcoreapp2.0\Plug.Resources.pdb
+C:\Pasan\Project\Interview\Plug\Plug.Resources\obj\Debug\netcoreapp2.0\Plug.Resources.csprojResolveAssemblyReference.cache
+C:\Pasan\Project\Interview\Plug\Plug.Resources\obj\Debug\netcoreapp2.0\Plug.Resources.csproj.CoreCompileInputs.cache
+C:\Pasan\Project\Interview\Plug\Plug.Resources\obj\Debug\netcoreapp2.0\Plug.Resources.AssemblyInfoInputs.cache
+C:\Pasan\Project\Interview\Plug\Plug.Resources\obj\Debug\netcoreapp2.0\Plug.Resources.AssemblyInfo.cs
+C:\Pasan\Project\Interview\Plug\Plug.Resources\obj\Debug\netcoreapp2.0\Plug.Resources.dll
+C:\Pasan\Project\Interview\Plug\Plug.Resources\obj\Debug\netcoreapp2.0\Plug.Resources.pdb
