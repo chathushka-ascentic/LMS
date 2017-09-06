@@ -1,0 +1,9 @@
+C:\Pasan\Project\Interview\Plug\Plug.Entities\bin\Debug\netcoreapp2.0\Plug.Entities.deps.json
+C:\Pasan\Project\Interview\Plug\Plug.Entities\bin\Debug\netcoreapp2.0\Plug.Entities.dll
+C:\Pasan\Project\Interview\Plug\Plug.Entities\bin\Debug\netcoreapp2.0\Plug.Entities.pdb
+C:\Pasan\Project\Interview\Plug\Plug.Entities\obj\Debug\netcoreapp2.0\Plug.Entities.csprojResolveAssemblyReference.cache
+C:\Pasan\Project\Interview\Plug\Plug.Entities\obj\Debug\netcoreapp2.0\Plug.Entities.csproj.CoreCompileInputs.cache
+C:\Pasan\Project\Interview\Plug\Plug.Entities\obj\Debug\netcoreapp2.0\Plug.Entities.AssemblyInfoInputs.cache
+C:\Pasan\Project\Interview\Plug\Plug.Entities\obj\Debug\netcoreapp2.0\Plug.Entities.AssemblyInfo.cs
+C:\Pasan\Project\Interview\Plug\Plug.Entities\obj\Debug\netcoreapp2.0\Plug.Entities.dll
+C:\Pasan\Project\Interview\Plug\Plug.Entities\obj\Debug\netcoreapp2.0\Plug.Entities.pdb

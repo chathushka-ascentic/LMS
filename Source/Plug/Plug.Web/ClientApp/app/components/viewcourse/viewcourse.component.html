@@ -1,0 +1,55 @@
+<p *ngIf="!enrollment"><em>Loading...</em></p>
+<div *ngIf="enrollment && enrollment.courseModel.subject" class="starter-template">
+    <div >
+        <div class="col-sm-1">
+            <button (click)="backToCourses()" class="btn btn-primary pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>  Back</button>
+        </div>
+        <div class="col-sm-11 text-center">
+            <h4 class="clearfix">{{enrollment.courseModel.subject}}</h4>
+        </div>
+    </div>
+    <div class='container-fluid'>
+        <div class='row'>
+            <div class='col-sm-3'>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" [ngStyle]="{'width.%': completeness}">
+                    </div>
+                </div>
+                <div>
+                    <small *ngIf="enrollment.lastSeen">Last Seen: {{enrollment.lastSeen}}</small>
+                </div>
+                <div *ngIf="currentModule && isNext()" class="padding-up-down-5">
+                    <button (click)="nextModule()" class="btn btn-primary"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>  Next</button>
+                    <button *ngIf="currentModule.canSkip" (click)="nextModule()" class="btn btn-warning"><span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span>  Skip</button>
+                </div>
+                <div *ngIf="currentModule && isLast()" class="padding-up-down-5">
+                    <button (click)="completeModule()" class="btn btn-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>  Complete</button>
+                </div>
+                <div class="list-group">
+                    <button *ngFor="let enrollModule of enrollment.enrollModules" type="button" class="list-group-item {{progress(enrollModule.isStarted,enrollModule.isCompleted)}} {{activeModule(enrollModule.moduleId)}}" (click)="showModule(enrollModule, enrollment.courseId)" ><span class="glyphicon {{icon(enrollModule.module.icon)}}" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;{{enrollModule.module.title}}<span class="glyphicon {{progressIcon(enrollModule.isStarted,enrollModule.isCompleted)}} pull-right" aria-hidden="true"></span></button>
+                </div>
+            </div>
+            <div class='col-sm-9 body-content'>
+                <div *ngIf="currentModule">
+                    <div *ngIf="currentModule && currentModule.icon == 'VIDEO'">
+                        <video width="100%" controls>
+                            <source src="{{currentModule.uri}}" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                    <div *ngIf="currentModule && currentModule.icon == 'TEXT'">
+                        <h5>{{currentModule.title}}</h5>
+                        <p>{{currentModule.description}}</p>
+                    </div>
+                    <div *ngIf="currentModule && currentModule.icon == 'QUESTION'">
+                        <h5>{{currentModule.title}}</h5>
+                        <div *ngFor="let choice of currentModule.choices">
+                            <input type="checkbox" name="{{choice.option}}" value="{{choice.option}}" [(ngModel)]="choice.checked"> {{choice.option}}
+                        </div>
+                        <button (click)="evaluate()" class="btn btn-info"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>  Evaluate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

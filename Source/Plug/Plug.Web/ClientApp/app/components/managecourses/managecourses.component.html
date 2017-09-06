@@ -1,0 +1,134 @@
+<div class="container">
+    <div>
+        <div class="col-sm-1">
+            <button (click)="backToHome()" class="btn btn-primary pull-left backBtn"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>  Back</button>
+        </div>
+        <div class="col-sm-11 text-center">
+            <h1>Plug Courses</h1>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="row">
+        <button *ngIf="!adding" (click)="addcourse()" class="btn btn-success btn-block block full-width m-b backBtn"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>  New Course</button>
+    </div>
+    <p *ngIf="!courses"><em>Loading...</em></p>
+    <div *ngIf="courses && !adding" class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Description</th>
+                        <th>Modules</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let course of courses">
+                        <td>{{ course.subject }}</td>
+                        <td>{{ course.description }}</td>
+                        <td><strong>{{ course.modules.length }}</strong> Modules</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-lg-1"></div>
+    </div>
+    <div *ngIf="adding" class="row">
+        <form>
+            <div class="form-group">
+                <input type="text" [(ngModel)]="newCourse.subject" name="subject" class="form-control" placeholder="Subject" required="">
+            </div>
+            <div class="form-group">
+                <textarea [(ngModel)]="newCourse.description" name="course.description" class="form-control" placeholder="Description" required=""></textarea>
+            </div>
+            <div *ngIf="moduleType == 0" class="text-center form-group">
+                <button (click)="addModule(1)" class="btn btn-info"><span class="glyphicon glyphicon-list-alt"></span> Add Text</button>
+                <button (click)="addModule(2)" class="btn btn-info"><span class="glyphicon glyphicon-play-circle"></span> Add Video</button>
+                <button (click)="addModule(3)" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span> Add Question</button>
+            </div>
+            <div *ngIf="moduleType != 0">
+                <hr />
+                <div *ngIf="moduleType == 1">
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="newModule.title" name="title" class="form-control" placeholder="Title" required="">
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" [(ngModel)]="newModule.canSkip" name="canSkip" required="">
+                            Can Skip
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <textarea [(ngModel)]="newModule.description" name="description" class="form-control" placeholder="Description" required=""></textarea>
+                    </div>
+                </div>
+                <div *ngIf="moduleType == 2">
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="newModule.title" name="title" class="form-control" placeholder="Title" required="">
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" [(ngModel)]="newModule.canSkip" name="canSkip" required="">
+                            Can Skip
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="newModule.uri" name="uri" class="form-control" placeholder="Video Link" required="">
+                    </div>
+                </div>
+                <div *ngIf="moduleType == 3">
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="newModule.title" name="title" class="form-control" placeholder="Title" required="">
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" [(ngModel)]="newModule.canSkip" name="canSkip" required="">
+                            Can Skip
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="newModule.text" name="text" class="form-control" placeholder="Question" required="">
+                    </div>
+                    <hr />
+                    <div class="form-group input-group">
+                        <span class="input-group-addon">
+                            <input type="checkbox" [(ngModel)]="newModule.choices[0].isAnswer" name="isAnswer">
+                        </span>
+                        <input type="text" [(ngModel)]="newModule.choices[0].option" name="option" class="form-control">
+                    </div>
+                    <div class="input-group form-group">
+                        <span class="input-group-addon">
+                            <input type="checkbox" [(ngModel)]="newModule.choices[1].isAnswer" name="isAnswer">
+                        </span>
+                        <input type="text" [(ngModel)]="newModule.choices[1].option" name="option" class="form-control">
+                    </div>
+                    <div class="input-group form-group">
+                        <span class="input-group-addon">
+                            <input type="checkbox" [(ngModel)]="newModule.choices[2].isAnswer" name="isAnswer">
+                        </span>
+                        <input type="text" [(ngModel)]="newModule.choices[2].option" name="option" class="form-control">
+                    </div>
+                    <div class="input-group form-group">
+                        <span class="input-group-addon">
+                            <input type="checkbox" [(ngModel)]="newModule.choices[3].isAnswer" name="isAnswer">
+                        </span>
+                        <input type="text" [(ngModel)]="newModule.choices[3].option" name="option" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button (click)="addModuleToCourse()" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Add</button>
+                    <button (click)="cancelModule()" class="btn btn-warning"><span class="glyphicon glyphicon-list-alt"></span> Cancel</button>
+                </div>
+            </div>
+            <div >
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let module of newModules"><span class="glyphicon {{icon(module.icon)}}" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;{{module.title}} <button (click)="removeModuleFromCourse(module.order)" class="btn btn-sm btn-danger pull-right"><span class="glyphicon glyphicon-remove"></span></button></li>
+                </ul>
+            </div>
+            <div class="form-group">
+                <button (click)="addCourseToDb()" class="btn btn-primary btn-block block full-width m-b">Add Course</button>
+            </div>
+        </form>
+    </div>
+</div>

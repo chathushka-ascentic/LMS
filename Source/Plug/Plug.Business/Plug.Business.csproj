@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Plug.DataRepositories\Plug.DataRepositories.csproj" />
+    <ProjectReference Include="..\Plug.Models\Plug.Models.csproj" />
+    <ProjectReference Include="..\Plug.Resources\Plug.Resources.csproj" />
+    <ProjectReference Include="..\Plug.Services\Plug.Services.csproj" />
+  </ItemGroup>
+
+</Project>

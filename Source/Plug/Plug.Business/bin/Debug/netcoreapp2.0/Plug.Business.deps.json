@@ -1,0 +1,85 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.0",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.0": {
+      "Plug.Business/1.0.0": {
+        "dependencies": {
+          "Plug.DataRepositories": "1.0.0",
+          "Plug.Models": "1.0.0",
+          "Plug.Resources": "1.0.0",
+          "Plug.Services": "1.0.0"
+        },
+        "runtime": {
+          "Plug.Business.dll": {}
+        }
+      },
+      "Plug.DataRepositories/1.0.0": {
+        "dependencies": {
+          "Plug.Entities": "1.0.0"
+        },
+        "runtime": {
+          "Plug.DataRepositories.dll": {}
+        }
+      },
+      "Plug.Entities/1.0.0": {
+        "runtime": {
+          "Plug.Entities.dll": {}
+        }
+      },
+      "Plug.Models/1.0.0": {
+        "runtime": {
+          "Plug.Models.dll": {}
+        }
+      },
+      "Plug.Resources/1.0.0": {
+        "runtime": {
+          "Plug.Resources.dll": {}
+        }
+      },
+      "Plug.Services/1.0.0": {
+        "dependencies": {
+          "Plug.Models": "1.0.0"
+        },
+        "runtime": {
+          "Plug.Services.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Plug.Business/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Plug.DataRepositories/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Plug.Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Plug.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Plug.Resources/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Plug.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

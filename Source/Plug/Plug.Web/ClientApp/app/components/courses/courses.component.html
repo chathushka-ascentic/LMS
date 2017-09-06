@@ -1,0 +1,25 @@
+<div class="container">
+    <div>
+        <div class="col-sm-1">
+            <button (click)="backToHome()" class="btn btn-primary pull-left backBtn"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>  Back</button>
+        </div>
+        <div class="col-sm-11 text-center">
+            <h1>Plug Courses</h1>
+        </div>
+    </div>
+    <p *ngIf="!courses"><em>Loading...</em></p>
+    <div *ngIf="courses" class="row">
+        <div class="col-lg-4 col-md-3 col-sm-6" *ngFor="let course of courses">
+            <div class="contact-box">
+                <h4><strong>{{ course.subject }}</strong></h4>
+
+                <p><small>{{ course.description }}</small></p>
+                <div>
+                    <strong>{{ course.modules.length }}</strong> Modules
+                </div>
+                <button *ngIf="course.enrolled" (click)="viewCoursePage(course)" class="btn btn-success btn-block block full-width m-b"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>  View</button>
+                <button *ngIf="!course.enrolled" (click)="enroll(course)" class="btn btn-primary btn-block block full-width m-b"><span class="glyphicon glyphicon-circle-arrow-down" aria-hidden="true"></span>  Enroll</button>
+            </div>
+        </div>
+    </div>
+</div>
